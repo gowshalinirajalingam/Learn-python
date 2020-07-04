@@ -10,6 +10,12 @@ rename columns: df = df.rename(columns={"A": "a", "B": "c"})
 Define the date format while changing date column type: df_salary['Paid_Date'] = pd.to_datetime(df_salary['Paid_Date'],format="%d/%m/%Y")
 create another column with given date format: df_salary['paid_Month_Year'] = df_salary['Paid_Date'].dt.strftime('%m-%Y')
 df['value'].replace({'cluster':Cluster,'0:1'},inplace=True) #inplace =True means no need to assign the result to another dataframe
+
+#make 1 st row as header
+header = temp.iloc[0]
+temp = temp.iloc[1::]
+temp.columns = header
+
 **Scatter plot**
 #Visualise data points
 plt.figure(figsize=(10,10))
