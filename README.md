@@ -11,7 +11,6 @@ Define the date format while changing date column type: df_salary['Paid_Date'] =
 create another column with given date format: df_salary['paid_Month_Year'] = df_salary['Paid_Date'].dt.strftime('%m-%Y')
 
 replace df column value pandas: df['value'].replace({'cluster':Cluster,'0:1'},inplace=True) #inplace =True means no need to assign the result to another dataframe
-replace column name in spark: renamed_df_sp = df_sp.select([F.col(col).alias(col.replace(' ','_')) for col in df_sp.columns])
 
 #make 1 st row as header
 header = temp.iloc[0]
