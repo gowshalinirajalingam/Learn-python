@@ -18,6 +18,8 @@ header = temp.iloc[0]
 temp = temp.iloc[1::]
 temp.columns = header
 
+Unpivot dataframe: pd.melt(x, id_vars=['farm', 'fruit'], var_name='year', value_name='value') #don't change 'farm,fruit' columns make other columns as a 'year' column.
+
 **Scatter plot**
 #Visualise data points
 plt.figure(figsize=(10,10))
