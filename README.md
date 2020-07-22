@@ -12,6 +12,7 @@ create another column with given date format: df_salary['paid_Month_Year'] = df_
 
 replace df column value pandas: df['value'].replace({'cluster':Cluster,'0:1'},inplace=True) #inplace =True means no need to assign the result to another dataframe
 replace column name character:     df.columns = df.columns.str.replace(" ", "")
+select set of rows where it has some value : df1[df1['DAT_INDATE']=="01/02/2020 00:00:00"]
 
 #make 1 st row as header
 header = temp.iloc[0]
